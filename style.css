@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=Space+Mono&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400;600&display=swap');
+:root{
+    --space-mono-font: 'Space Mono', monospace;
+    --border-dark-subtle: #373838; 
+    --font-tillana:'Tillana', cursive;
+}
+*{
+    box-sizing: border-box;
+}
+body *{
+    font-family: var(--space-mono-font);
+}
+/**
+Page Design
+*/
+body,
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+  background-color: #283a2f;
+}
+.page-title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 3px;
+    font-family: var(--secular-font);
+    text-align: center;
+    text-shadow: 0px 0px 3px #2020208c;
+}
+.border-dark-subtle{
+    border-color: var(--border-dark-subtle) !important;
+}
+/* Scrambled Game Elements Design */
+div#scrambled-word {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#game-container{
+    overflow: hidden;
+    height: 0px;
+    transition:all .5s ease-in-out;
+}
+#game-container.show{
+    --default-height: 200px;
+    animation: slideDown .5s ease-in-out forwards;
+}
+@keyframes slideDown {
+    0%{
+        height: 0px; 
+    }
+    50%,100%{
+        height: var(--default-height); 
+    }
+    100%{
+        height: auto; 
+    }
+    
+}
+
