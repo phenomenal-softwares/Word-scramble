@@ -55,6 +55,9 @@ div#scrambled-word {
     --default-height: 200px;
     animation: slideDown .5s ease-in-out forwards;
 }
+#game-timer{
+    color: red;
+}
 @keyframes slideDown {
     0%{
         height: 0px; 
